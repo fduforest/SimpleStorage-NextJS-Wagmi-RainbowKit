@@ -59,10 +59,6 @@ const config: HardhatUserConfig = {
         },
       },
     ],
-  },
-  paths: {
-    artifacts: '../frontend/app/artifacts',
-  },
-
+  }
 };
 export default config;

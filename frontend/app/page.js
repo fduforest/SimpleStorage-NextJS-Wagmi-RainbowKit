@@ -20,7 +20,7 @@ export default function Home() {
     const data = await readContract({
       address: contractAddress,
       abi: abi,
-      functionName: 'getNumber',
+      functionName: 'retrieve',
     })
     setGetNumber(Number(data))
   }
@@ -29,7 +29,7 @@ export default function Home() {
     const { request } = await prepareWriteContract({
       address: contractAddress,
       abi: abi,
-      functionName: 'setNumber',
+      functionName: 'store',
       args: [setNumber]
     })
     const { hash } = await writeContract(request)
